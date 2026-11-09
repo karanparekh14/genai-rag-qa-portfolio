@@ -23,7 +23,7 @@
 
 # 🎯 Featured Project: Sustainable Supply Chain Management Q&A Search System
 
-A **production-grade Retrieval-Augmented Generation (RAG)** pipeline that answers natural-language questions about Sustainable Supply Chain Management, grounded in a curated knowledge base of **100 academic and industry PDFs**. Built end-to-end on **Google Cloud Platform Vertex AI** with **Gemini 2.5 Pro** as the generator and **Matching Engine** as the vector store.
+A **Retrieval-Augmented Generation (RAG)** pipeline, built for a UNT course, that answers natural-language questions about Sustainable Supply Chain Management, grounded in a curated knowledge base of **100 academic and industry PDFs**. Built end-to-end on **Google Cloud Platform Vertex AI** with **Gemini 2.5 Pro** as the generator and **Matching Engine** as the vector store.
 
 The system retrieves relevant context using semantic search, generates grounded answers with cited sources, and, critically, **refuses to hallucinate** when asked about topics outside its corpus.
 
