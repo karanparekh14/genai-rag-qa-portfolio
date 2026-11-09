@@ -29,7 +29,12 @@ The system retrieves relevant context using semantic search, generates grounded 
 
 ## 🏗️ Architecture
 
-![HLD Architecture Diagram](./adta5770-rag-qa-system/docs/hld_architecture_diagram.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rag-architecture-dark.svg">
+  <img alt="RAG pipeline: documents, chunker, embeddings, Matching Engine retriever, retrieval chain and Gemini 2.5 Pro; tested with in-domain and out-of-domain questions" src="assets/rag-architecture-light.svg" width="100%">
+</picture>
+
+<sub>The original course HLD diagram is kept at [`adta5770-rag-qa-system/docs/hld_architecture_diagram.png`](./adta5770-rag-qa-system/docs/hld_architecture_diagram.png).</sub>
 
 The system implements the canonical RAG pattern, decomposed into two cooperating subsystems:
 

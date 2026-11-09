@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="RAG question answering on Vertex AI: retrieval and generation subsystems">
+<title>RAG question answering on Vertex AI: retrieval and generation subsystems</title>
+<rect width="1200" height="600" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text x="40" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="start">Grounded answers from 100 PDFs</text>
+<text x="40" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#9198a1" text-anchor="start">Retrieval-augmented generation on Google Vertex AI. UNT course project, group of four; I led the infrastructure and pipeline.</text>
+<rect x="30" y="110" width="700" height="330" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
+<text x="50" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6e7681" text-anchor="start">RETRIEVAL</text>
+<rect x="750" y="110" width="420" height="330" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
+<text x="770" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6e7681" text-anchor="start">GENERATION</text>
+<rect x="46" y="150" width="200" height="116" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="46" y="159" width="4" height="98" rx="2" fill="#58a6ff"/>
+<text x="62" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Documents</text>
+<text x="62" y="197.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">100 supply chain PDFs</text>
+<text x="62" y="214.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">in a Cloud Storage</text>
+<text x="62" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">bucket</text>
+<rect x="268" y="150" width="200" height="116" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="268" y="159" width="4" height="98" rx="2" fill="#58a6ff"/>
+<text x="284" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Chunker</text>
+<text x="284" y="197.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">recursive splitter,</text>
+<text x="284" y="214.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">1,000 chars, 200</text>
+<text x="284" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">overlap: 17,416 chunks</text>
+<rect x="490" y="150" width="224" height="116" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="490" y="159" width="4" height="98" rx="2" fill="#58a6ff"/>
+<text x="506" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Embeddings</text>
+<text x="506" y="197.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">text-embedding-005,</text>
+<text x="506" y="214.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">768 dimensions, batched</text>
+<text x="506" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">with rate-limit back-off</text>
+<rect x="268" y="296" width="446" height="128" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="268" y="305" width="4" height="110" rx="2" fill="#f0b44c"/>
+<text x="284" y="321" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Vector store and retriever</text>
+<text x="284" y="343.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">Vertex AI Matching Engine (tree-AH index, stream</text>
+<text x="284" y="360.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">updates), wrapped as a LangChain vector store;</text>
+<text x="284" y="378.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">cosine similarity, top 10 chunks per question</text>
+<rect x="46" y="296" width="200" height="128" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="46" y="305" width="4" height="110" rx="2" fill="#b392f0"/>
+<text x="62" y="321" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Question</text>
+<text x="62" y="343.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">sent to the retriever</text>
+<text x="62" y="360.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">and the prompt</text>
+<text x="62" y="378.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">template together</text>
+<defs><marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/></marker><marker id="arrow1s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/></marker></defs>
+<path d="M 246 208 L 264 208" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow1)"/>
+<defs><marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/></marker><marker id="arrow2s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/></marker></defs>
+<path d="M 468 208 L 486 208" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow2)"/>
+<defs><marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/></marker><marker id="arrow3s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/></marker></defs>
+<path d="M 602 266 L 602 292" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow3)"/>
+<defs><marker id="arrow4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b392f0"/></marker><marker id="arrow4s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b392f0"/></marker></defs>
+<path d="M 246 360 L 264 360" fill="none" stroke="#b392f0" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow4)"/>
+<rect x="766" y="150" width="388" height="116" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="766" y="159" width="4" height="98" rx="2" fill="#b392f0"/>
+<text x="782" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Prompt and retrieval chain</text>
+<text x="782" y="197.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">LangChain create_retrieval_chain with a</text>
+<text x="782" y="214.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">stuff-documents chain: question plus</text>
+<text x="782" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">ranked context</text>
+<rect x="766" y="296" width="388" height="128" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+<rect x="766" y="305" width="4" height="110" rx="2" fill="#3fb950"/>
+<text x="782" y="321" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="start">Gemini 2.5 Pro</text>
+<text x="782" y="343.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">temperature 0.2, top_p 0.8, top_k 40</text>
+<text x="782" y="360.75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">answers with cited sources, or says it</text>
+<text x="782" y="378.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198a1" text-anchor="start">cannot answer when the corpus has nothing</text>
+<defs><marker id="arrow5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f0b44c"/></marker><marker id="arrow5s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f0b44c"/></marker></defs>
+<path d="M 714 360 L 740 360 L 740 208 L 762 208" fill="none" stroke="#f0b44c" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow5)"/>
+<defs><marker id="arrow6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b392f0"/></marker><marker id="arrow6s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b392f0"/></marker></defs>
+<path d="M 960 266 L 960 292" fill="none" stroke="#b392f0" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow6)"/>
+<rect x="30" y="460" width="1140" height="116" rx="12" fill="#0f2a17" stroke="#3fb950" stroke-width="1.3"/>
+<text x="50" y="488" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#e6edf3" text-anchor="start">Tested both ways</text>
+<text x="50" y="512.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#e6edf3" text-anchor="start">8 in-domain questions answered from the documents, with sources (“What is sustainable supply chain management?”: 10 chunks from 5 papers).</text>
+<text x="50" y="530.46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#e6edf3" text-anchor="start">2 out-of-domain questions refused (“What are the symptoms of type 2 diabetes?”: “I cannot determine the answer to that.”).</text>
+</svg>
